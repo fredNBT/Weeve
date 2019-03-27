@@ -1,9 +1,9 @@
 <template>
-  <div class="small">
-    <line-chart :chart-data="datacollection"></line-chart>
-    <button @click="fillData()">Randomize</button>
-    <p>{{wiresharkdata}} </p>
-  </div>
+ <!-- <div class="small" style="width:100%"> -->
+    <line-chart :chart-data="datacollection" style="width: 500px; "></line-chart>
+   <!-- <button @click="fillData()">Randomize</button>-->
+  <!--  <p>{{wiresharkdata}} </p>-->
+ <!-- </div> -->
 </template>
 
 <script>

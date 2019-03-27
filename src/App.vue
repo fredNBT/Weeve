@@ -8,6 +8,7 @@
   <div id="MenuText">
     <p>Overview</p>
     <p>Admin</p>
+    <p>Customer</p>
   </div>
 
   <div id="Stats">
@@ -19,7 +20,7 @@
     </div>
 
 
-    <div style="test"> hery</div>
+   <!-- <div style="test"> hery</div> -->
   </div>
 
   <div id="Stats2">
@@ -27,22 +28,24 @@
        <button>Mileage Data </button>
        <div></div>
     </div>
-    <div></div>
+     <CurrentLineChart/>
   </div>
 
   
-  <div id="InfoTable">InfoTable</div>
-   <!--  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <InfoTable></InfoTable>
+   
   </div>
 </template>
 
 <script>
-/* import HelloWorld from './components/HelloWorld.vue' */
+ import CurrentLineChart from './components/CurrentLineChart.vue' 
+ import InfoTable from  './components/Table.vue' 
 
 export default {
   name: 'app',
   components: {
-  /*   HelloWorld */
+   CurrentLineChart,
+   InfoTable
   }
 }
 </script>
