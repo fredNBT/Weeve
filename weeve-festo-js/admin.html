@@ -16,36 +16,47 @@
 </head>
 
 <body>
-    <!---- <video autoplay muted loop id="myVideo" style="position: fixed">
-        <source src="./assets/Comp.mp4" type="video/mp4">
-    </video> -->
-
-    <div class="HeaderBanner">
-        <h1>FESTO</h1>
-    </div>
-
-    <div class="MenuText">
-        <a href="index.html">Overview</a>
-        <a href="admin.html">Admin</a>
-        <a href="customer.html">Customer</a>
-    </div>
-
-    <div id="Stats">
-        <div id="StatsText" style="padding:10px">
-            <h3>MACHINE DATA</h3>
-            <p>Tracking, Reporting, Storing</p>
-            <h3>FESTO CARTESIAN ROBOT</h3>
-            <p>La Rambla 82, 08002 Barcelona Spain</p>
+        <!---- <video autoplay muted loop id="myVideo" style="position: fixed">
+            <source src="./assets/Comp.mp4" type="video/mp4">
+        </video> -->
+        <div class="HeaderBanner">
+            <h1>FESTO</h1>
         </div>
-    </div>
-    <div id="Stats2">
-        <div>
-            <button>Mileage Data </button>
-            <h4 class="mileage" style="text-align:center"></h4>
-            <div></div>
+        <div class="MenuText">
+            <a href="index.html">Overview</a>
+            <a href="admin.html">Admin</a>
+            <a href="customer.html">Customer</a>
         </div>
-        <!-- <CurrentLineChart/>-->
-    </div>
+        <div id="Stats">
+            <div id="StatsText" style="padding:10px">
+                <h3>MACHINE DATA</h3>
+                <p>Tracking, Reporting, Storing</p>
+                <h3>FESTO CARTESIAN ROBOT</h3>
+                <p>La Rambla 82, 08002 Barcelona Spain</p>
+            </div>
+        </div>
+        <div style="display:flex">
+            <div id="Stats2">
+                <div style="width:100%; ">
+                    <button>Mileage Data </button>
+                    <div style="display:flex;   justify-content: space-around;  padding: 40px ">
+                        <h1 class="mileage"></h1>
+                        <div>
+                            <p style="border: 0;" id="chart" class="chart" data-percent="50">
+                                <p>Percentage Used </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Stats2">
+               <div style="width:80%; height: 80%">
+                    
+                    <canvas id="LineChart"></canvas>
+               </div>
+    
+            </div>
+        </div>
+        </div>
     <table>
         <tr>
             <th>Machine ID</th>

@@ -1,4 +1,5 @@
-let LineChartData = [3,5,6,8]
+let LineChartData = [];
+let LineChartLables = [];
 
 ShowPieChart(22);
 
@@ -21,15 +22,13 @@ function ShowPieChart(Complete) {
     $('.chart').data('easyPieChart').update(Complete);
 };
 
-
+function LoadLineChart(){
 var ctx = $('#LineChart');
 var linechart = new Chart(ctx, {
     type:'line',
     lineColor: "red",
-    
-
     data: {
-       labels:['14:59:30','14:59:45','14:59:30','14:59:30'],
+       labels:LineChartLables,
        datasets:[
            {
             borderColor: "#80b6f4",
@@ -50,6 +49,15 @@ var linechart = new Chart(ctx, {
     }
 })
 
-function test(){
-    alert("hello")
 }
+
+function test(){
+    LineChartData.push(6);
+    var today = new Date();
+    LineChartLables.push(today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+    LoadLineChart();
+}
+
+$( document ).ready(function() {
+    LoadLineChart();
+});

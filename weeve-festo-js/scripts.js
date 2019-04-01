@@ -56,8 +56,9 @@ $( document ).ready(function() {
         $('.token_balance').text(parseFloat(currentTokenBalance).toFixed(2)+"/"+initialTokenBalance);
         $('.eur_balance').text(parseFloat(currentTokenBalance/tokenExchangeRate).toFixed(2)+"/"+initialTokenBalance/tokenExchangeRate);
         $('.cost_usage').text(parseFloat(totalCost).toFixed(2));
-        LineChartData.push(3);
-        console.log(LineChartData)
+        LineChartData.push(parseFloat(currentMileage).toFixed(3));
+        console.log(LineChartData);
+        LoadLineChart();
 
       })
   })
