@@ -1,14 +1,23 @@
 <template>
   <div id="app">
 
-  <div id="HeaderBanner">
+    
+<video autoplay muted loop id="myVideo" style="position: absolute; left: 0px; top:0px">
+  <source src="./assets/Comp.mp4" type="video/mp4">
+  
+
+</video>
+
+  <div id="HeaderBanner" style="">
     <h1>FESTO</h1>
   </div>
 
   <div id="MenuText">
-    <p>Overview</p>
-    <p>Admin</p>
-    <p>Customer</p>
+    
+      <p>Overview</p>
+      <p>Admin</p>
+      <p>Customer</p>
+ 
   </div>
 
   <div id="Stats">
@@ -28,7 +37,7 @@
        <button>Mileage Data </button>
        <div></div>
     </div>
-     <CurrentLineChart/>
+      <!-- <CurrentLineChart/>-->
   </div>
 
   
@@ -36,7 +45,9 @@
    
   </div>
 </template>
-
+<script src="web3.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="scripts.js"></script>
 <script>
  import CurrentLineChart from './components/CurrentLineChart.vue' 
  import InfoTable from  './components/Table.vue' 

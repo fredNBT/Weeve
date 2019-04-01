@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<!position: absolute; left: 0px; top:0px-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Festo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="jquery.easypiechart.js"></script>
+</head>
+
+<body>
+    <!---- <video autoplay muted loop id="myVideo" style="position: fixed">
+        <source src="./assets/Comp.mp4" type="video/mp4">
+    </video> -->
+    <div class="HeaderBanner">
+        <h1>FESTO</h1>
+    </div>
+    <div class="MenuText">
+        <a href="index.html">Overview</a>
+        <a href="admin.html">Admin</a>
+        <a href="customer.html">Customer</a>
+    </div>
+    <div id="Stats">
+        <div id="StatsText" style="padding:10px">
+            <h3>MACHINE DATA</h3>
+            <p>Tracking, Reporting, Storing</p>
+            <h3>FESTO CARTESIAN ROBOT</h3>
+            <p>La Rambla 82, 08002 Barcelona Spain</p>
+        </div>
+    </div>
+    <div style="display:flex">
+        <div id="Stats2">
+            <div style="width:100%; ">
+                <button>Mileage Data </button>
+                <div style="display:flex;   justify-content: space-around;  padding: 40px ">
+                    <h1 class="mileage"></h1>
+                    <p style="border: 0;" id="chart" class="chart" data-percent="50">
+                </div>
+            </div>
+        </div>
+        <div id="Stats2">
+           <div style="width:80%; height: 80%">
+                
+                <canvas id="LineChart"></canvas>
+           </div>
+
+        </div>
+    </div>
+    </div>
+    <table>
+        <tr>
+            <th>Cost per Usage [Token/km]</th>
+            <th>Tokens per EUR</th>
+        </tr>
+        <tr>
+            <td id="cost_per_usage"></td>
+            <td id="token_per_eur"></td>
+        </tr>
+    </table>
+
+    <button onclick="test()">test</button>
+
+
+    <script src="index.js" async defer></script>
+    <script src="web3.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,45 +1,26 @@
 <template>
-
-
 <div>
-     <table>
-      <tr>
-        <th>Machine ID</th>
-        <th>Leaser</th>
-        <th>Insurance Policy</th>
-        <th>Leaser</th>
-        <th>Time Period</th>
-        <th>Mileage [km]</th>
-        <th>Account balance (tokens)</th>
-        <th>SAP</th>
-      </tr>
-      <tr>
-        <td>Peter</td>
-        <td>Griffin</td>
-        <td>$100</td>
-      </tr>
-      <tr>
-        <td>Lois</td>
-        <td>Griffin</td>
-        <td>$150</td>
-      </tr>
-      <tr>
-        <td>Joe</td>
-        <td>Swanson</td>
-        <td>$300</td>
-      </tr>
-      <tr>
-        <td>Cleveland</td>
-        <td>Brown</td>
-        <td>$250</td>
-      </tr>
-    </table>
+          <table>
+          <tr>
+              <th>Cost per Usage [Token/km]</th>
+              <th>Tokens per EUR</th>
+            </tr>
+            <tr>
+              <td id="cost_per_usage"></td>
+              <td id="token_per_eur"></td>
+            </tr>
+      </table>
 </div>
 </template>
-
 <script>
+import myScript from ''
+
 export default {
- 
+
+  created: function () {
+    // `this` points to the vm instance
+    console.log('a is: ')
+  }
 }
 </script>
 
@@ -54,14 +35,16 @@ table {
   width: 100%;
 
 }
-
 th {
   height: 50px;
   background-color: #DCE1E7;
 }
 
+td{
+    height: 100px;
+}
+
 div{
     padding: 40px;
 }
-
 </style>
