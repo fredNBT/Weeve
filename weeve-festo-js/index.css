@@ -44,8 +44,8 @@ body {
     text-align: left;
   }
   
-  #StatsText h3{
-    color:#BFC5D2;
+  #StatsText h2{
+    
     margin-top: 50px;
     margin-left: 50px;
   }
@@ -155,6 +155,16 @@ body {
 .MenuText > a:hover::before, a:focus::before {
     transform-origin: left top;
     transform: scale(1, 1);
+}
+
+.InvoiceButton{
+  background-color: #2E5AFF;
+  border-radius: 10px;
+  color:white;
+  
+}
+.InvoiceRow{
+  text-align: center;
 }
   
   

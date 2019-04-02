@@ -38,7 +38,7 @@ $( document ).ready(function() {
         $('.machineid').text(machineid); 
         $('#cost_per_usage').text(tokenPerMileage);
         $('#token_per_eur').text(tokenExchangeRate);
-        $('.mileage').text(parseFloat(currentMileage).toFixed(3));
+        $('.mileage').text(parseFloat(currentMileage).toFixed(3) + " metres");
         $('.token_balance').text(parseFloat(currentTokenBalance).toFixed(2)+"/"+initialTokenBalance);
         $('.eur_balance').text(parseFloat(currentTokenBalance/tokenExchangeRate).toFixed(2)+"/"+initialTokenBalance/tokenExchangeRate);
         $('.cost_usage').text(parseFloat(totalCost).toFixed(2));

@@ -13,6 +13,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="jquery.easypiechart.js"></script>
 </head>
 
 <body>
@@ -28,41 +31,53 @@
             <a href="customer.html">Customer</a>
         </div>
         <div id="Stats">
-            <div id="StatsText" style="padding:10px">
-                <h3>MACHINE DATA</h3>
-                <p>Tracking, Reporting, Storing</p>
-                <h3>FESTO CARTESIAN ROBOT</h3>
-                <p>La Rambla 82, 08002 Barcelona Spain</p>
+                <div id="StatsText" style="padding:10px">
+                    <h2>MACHINE DATA</h2>
+                    <p>Tracking, Reporting, Storing</p>
+                    <h2>FESTO CARTESIAN ROBOT</h2>
+                    <p>La Rambla 82, 08002 Barcelona Spain</p>
+                </div>
             </div>
-        </div>
-        <div style="display:flex">
-            <div id="Stats2">
-                <div style="width:100%; ">
-                    <button>Mileage Data </button>
-                    <div style="display:flex;   justify-content: space-around;  padding: 40px ">
-                        <h1 class="mileage"></h1>
-                        <div>
-                            <p style="border: 0;" id="chart" class="chart" data-percent="50">
-                                <p>Percentage Used </p>
+            <div style="display:flex">
+                <div id="Stats2">
+                    <div style="width:100%; ">
+                        <button>Mileage Data </button>
+                        <div style="display:flex;   justify-content: space-around;  padding: 40px ">
+        
+                            <div>
+                                <div style="display: flex">
+                                    <h2>Total Mileage: &nbsp;&nbsp;</h2>
+                                    <h2 class="mileage"></h2>
+                                </div>
+                                <div style="display: flex">
+                                    <h2>Tokens remaining: &nbsp;&nbsp;</h2>
+                                    <h2 class="token_balance"></h2>
+                                </div>
+                            </div>
+                            <div>
+                                <p style="border: 0;" id="chart" class="chart" data-percent="50">
+                            
+                                    <h4>Percentage of tokens Used </h4>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div id="Stats2">
+                    <div style="width:80%; height: 80%">
+        
+                        <canvas id="LineChart"></canvas>
+                    </div>
+        
+                </div>
             </div>
-            <div id="Stats2">
-               <div style="width:80%; height: 80%">
-                    <canvas id="LineChart"></canvas>
-               </div>
-    
             </div>
-        </div>
-        </div>
     <table>
         <tr>
             <th>Machine ID</th>
             <th>Leaser</th>
             <th>Insurance Policy</th>
             <th>Time Period</th>
-            <th>Mileage [km]</th>
+            <th>Mileage [m]</th>
             <th>Account balance (tokens)</th>
             <th>SAP</th>
         </tr>
@@ -73,7 +88,7 @@
             <td>01/04/2019 - Present</td>
             <td class="mileage"></td>
             <td class="token_balance">100</td>
-            <td><button class="InvoiceButton">Generate invoice</button></td>
+            <td class="InvoiceRow"><button class="InvoiceButton">Generate invoice</button></td>
         </tr>
         <tr>
             <td>MACHINE_2</td>
@@ -82,7 +97,7 @@
             <td>01/01/2019 – 01/04/2019</td>
             <td>69.995</td>
             <td>46</td>
-            <td><button class="InvoiceButton">Generate invoice</button></td>
+            <td class="InvoiceRow"><button class="InvoiceButton">Generate invoice</button></td>
         </tr>
         <tr>
             <td>MACHINE_3</td>
@@ -91,7 +106,7 @@
             <td>01/03/2018 – 01/02/2019</td>
             <td>50000</td>
             <td>650</td>
-            <td>CREATE INVOICE BUTTON</td>
+            <td class="InvoiceRow"><button class="InvoiceButton">Generate invoice</button></td>
         </tr>
         <tr>
             <td>MACHINE_4</td>
@@ -100,7 +115,7 @@
             <td>07/11/2018 – 01/01/2019</td>
             <td>6000</td>
             <td>400</td>
-            <td>CREATE INVOICE BUTTON</td>
+            <td class="InvoiceRow"><button class="InvoiceButton">Generate invoice</button></td>
         </tr>
 
         <tr>
@@ -110,7 +125,7 @@
             <td>07/11/2018 – 01/01/2019</td>
             <td>6000</td>
             <td>400</td>
-            <td>CREATE INVOICE BUTTON</td>
+            <td class="InvoiceRow"><button class="InvoiceButton">Generate invoice</button></td>
         </tr>
     </table>
     <script src="index.js" async defer></script>
