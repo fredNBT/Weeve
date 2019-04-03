@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
     <script src="jquery.easypiechart.js"></script>
 </head>
 
@@ -38,12 +38,11 @@
             <p>La Rambla 82, 08002 Barcelona Spain</p>
         </div>
     </div>
-    <div style="display:flex">
+    <div style="display:flex; height: 100%; ">
         <div id="Stats2">
             <div style="width:100%; ">
                 <button>Mileage Data </button>
-                <div style="display:flex;   justify-content: space-around;  padding: 40px ">
-
+                <div style="display:flex;   justify-content: space-around;  padding: 40px; height:80% ">
                     <div>
                         <div style="display: flex">
                             <h2>Total Mileage: &nbsp;&nbsp;</h2>
@@ -54,9 +53,8 @@
                             <h2 class="token_balance"></h2>
                         </div>
                     </div>
-                    <div>
+                    <div id="PieChartContainer" style=" height:100%; width: 30%" >
                         <p style="border: 0;" id="chart" class="chart" data-percent="50">
-                    
                             <h4>Percentage of tokens Used </h4>
                     </div>
                 </div>
@@ -64,7 +62,6 @@
         </div>
         <div id="Stats2">
             <div style="width:80%; height: 80%">
-
                 <canvas id="LineChart"></canvas>
             </div>
 
